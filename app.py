@@ -148,16 +148,43 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .stButton>button:hover{{transform:translateY(-2px); box-shadow: var(--glow-green)!important;}}
 
 /* ── INPUTS ──────────────────────────────────────────────────────────────── */
-.stTextArea textarea,.stTextInput input{{
-    background:rgba(120,120,120,0.05)!important;border:1px solid var(--card-border)!important;
-    border-radius:10px!important;color:var(--text-primary)!important;
-    font-family:\'JetBrains Mono\',monospace!important;font-size:.9rem!important;}}
-.stTextArea textarea:focus,.stTextInput input:focus{{
-    border-color:var(--accent-blue)!important;box-shadow:var(--glow-blue)!important;}}
+div[data-testid="stTextInputRootElement"], div[data-testid="stTextAreaRootElement"]{{
+    background:var(--card-bg)!important;
+    background-color:var(--card-bg)!important;
+    border:1px solid var(--card-border)!important;
+    border-radius:10px!important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}}
+div[data-testid="stTextInputRootElement"] *, div[data-testid="stTextAreaRootElement"] *{{
+    background:transparent!important;
+    background-color:transparent!important;
+}}
+div[data-testid="stTextInputRootElement"] input, div[data-testid="stTextAreaRootElement"] textarea{{
+    color:var(--text-primary)!important;
+    background:transparent!important;
+    background-color:transparent!important;
+    font-family:\'JetBrains Mono\',monospace!important;
+    font-size:.9rem!important;
+}}
+div[data-testid="stTextInputRootElement"] input::placeholder, div[data-testid="stTextAreaRootElement"] textarea::placeholder{{
+    color:var(--text-secondary)!important;
+    opacity:0.6;
+}}
+div[data-testid="stTextInputRootElement"]:focus-within, div[data-testid="stTextAreaRootElement"]:focus-within{{
+    border-color:var(--accent-blue)!important;
+    box-shadow:var(--glow-blue)!important;
+}}
 label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.9rem!important;}}
 
-.stSelectbox>div>div{{background:rgba(120,120,120,0.05)!important;border:1px solid var(--card-border)!important;
-    border-radius:10px!important;color:var(--text-primary)!important;}}
+.stSelectbox>div>div, .stSelectbox div[data-baseweb="select"], .stSelectbox [data-baseweb="select"]>div{{
+    background:var(--card-bg)!important;
+    background-color:var(--card-bg)!important;
+    color:var(--text-primary)!important;
+}}
+.stSelectbox>div>div{{
+    border:1px solid var(--card-border)!important;
+    border-radius:10px!important;
+}}
 
 /* ── RESULT ──────────────────────────────────────────────────────────────── */
 .result-active{{background:rgba(16,185,129,0.1);border:2px solid var(--accent-green);
