@@ -83,6 +83,7 @@ st.markdown(f"""
 html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{{
     background:var(--bg-gradient, var(--bg-color))!important;color:var(--text-primary)!important;
     font-family:'Plus Jakarta Sans',sans-serif!important; transition: background 0.3s ease;
+    font-size: 16px !important;
 }}
 [data-testid="block-container"]{{padding:0!important;max-width:100%!important;}}
 
@@ -121,7 +122,7 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:2.2rem;
     letter-spacing:.08em;margin-bottom:.5rem;}}
 .hero-title span{{color:var(--accent-green);}}
-.hero-sub{{font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
+.hero-sub{{font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
 .hero-badges{{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}}
 .hero-badge{{background:rgba(255,255,255,0.55);border:1.5px solid rgba(99,102,241,0.35);
     border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:#3730a3;font-weight:700;
@@ -185,7 +186,7 @@ div[data-testid="stTextInputRootElement"]:focus-within, div[data-testid="stTextA
     border-color:var(--accent-blue)!important;
     box-shadow:var(--glow-blue)!important;
 }}
-label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.9rem!important;}}
+label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.95rem!important;}}
 
 .stSelectbox>div>div, .stSelectbox div[data-baseweb="select"], .stSelectbox [data-baseweb="select"]>div{{
     background:var(--card-bg)!important;
@@ -437,34 +438,35 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 .hero-title {{
     font-family: 'Cinzel', serif !important;
     font-weight: 900 !important;
-    font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
+    font-size: clamp(1.9rem, 4.5vw, 3rem) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
     background: none !important;
     animation: none !important;
     letter-spacing: .08em !important;
-    text-shadow: none !important;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4) !important;
     display: inline-block !important;
 }}
 .hero-title span {{
-    -webkit-text-fill-color: #000000 !important;
+    -webkit-text-fill-color: #ffffff !important;
     background: none !important;
 }}
 #hero-title-tw {{
     font-family: 'Cinzel', serif;
     font-weight: 900;
-    font-size: clamp(1.6rem, 4vw, 2.6rem);
-    color: #000000;
-    -webkit-text-fill-color: #000000;
+    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
     background: none;
     animation: none;
     letter-spacing: .08em;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
     display: inline-block;
     margin-bottom: .5rem;
 }}
 #hero-title-tw::after {{
     content: '|';
-    -webkit-text-fill-color: #000000;
+    -webkit-text-fill-color: #ffffff;
     animation: caretBlink 1s step-end infinite;
     margin-left: 2px;
     font-weight: 400;
