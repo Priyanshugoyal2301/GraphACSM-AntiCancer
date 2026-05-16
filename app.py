@@ -49,25 +49,30 @@ theme_vars = """
     --grid-color: rgba(56, 189, 248, 0.08);
     --hero-gradient: linear-gradient(180deg, #0A0F1C 0%, #0F172A 100%);
 """ if dark_mode else """
-    --bg-color: #F8FAFC;
+    --bg-color: #EEF2FF;
+    --bg-gradient: linear-gradient(135deg, #EEF2FF 0%, #F0FDF4 40%, #FFF7ED 80%, #EEF2FF 100%);
     --text-primary: #0F172A;
-    --text-secondary: #64748B;
-    --card-bg: rgba(255, 255, 255, 0.7);
-    --card-border: rgba(15, 23, 42, 0.1);
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --accent-blue: #2563eb;
+    --text-secondary: #475569;
+    --card-bg: rgba(255, 255, 255, 0.78);
+    --card-border: rgba(99, 102, 241, 0.18);
+    --nav-bg: rgba(238, 242, 255, 0.90);
+    --accent-blue: #4F46E5;
     --accent-green: #059669;
+    --accent-purple: #7C3AED;
+    --accent-teal: #0D9488;
+    --accent-orange: #EA580C;
     --accent-red: #dc2626;
-    --glow-blue: 0 4px 15px rgba(37, 99, 235, 0.15);
-    --glow-green: 0 4px 15px rgba(5, 150, 105, 0.15);
+    --glow-blue: 0 4px 20px rgba(79, 70, 229, 0.22);
+    --glow-green: 0 4px 20px rgba(5, 150, 105, 0.22);
+    --glow-purple: 0 4px 20px rgba(124, 58, 237, 0.22);
     --glass-blur: blur(20px);
-    --grid-color: rgba(15, 23, 42, 0.05);
-    --hero-gradient: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+    --grid-color: rgba(79, 70, 229, 0.05);
+    --hero-gradient: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 35%, #DCFCE7 70%, #FFF7ED 100%);
 """
 
 st.markdown(f"""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Sora:wght@400;600;700;800&family=Cinzel:wght@700;900&family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {{
 {theme_vars}
@@ -75,8 +80,8 @@ st.markdown(f"""
 
 *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0;}}
 html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{{
-    background:var(--bg-color)!important;color:var(--text-primary)!important;
-    font-family:'Outfit',sans-serif!important; transition: background 0.3s ease;
+    background:var(--bg-gradient, var(--bg-color))!important;color:var(--text-primary)!important;
+    font-family:'Plus Jakarta Sans',sans-serif!important; transition: background 0.3s ease;
 }}
 [data-testid="block-container"]{{padding:0!important;max-width:100%!important;}}
 
@@ -93,26 +98,26 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .navbar-brand{{display:flex;align-items:center;gap:.8rem;}}
 .navbar-logo{{width:40px;height:40px;background:linear-gradient(135deg, var(--accent-blue), var(--accent-green));border-radius:12px;
     display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:var(--glow-blue);}}
-.navbar-title{{font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:1.4rem;color:var(--text-primary);letter-spacing:-.01em;}}
+.navbar-title{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.4rem;color:var(--text-primary);letter-spacing:-.01em;}}
 .navbar-title span{{color:var(--accent-green);}}
 .navbar-subtitle{{font-size:.7rem;color:var(--text-secondary);font-weight:400;display:block;margin-top:-4px;}}
 .navbar-links{{display:flex;gap:.5rem;}}
 .nav-btn{{
     color:var(--text-secondary)!important;background:transparent;border:none;
     padding:.5rem 1rem;border-radius:8px;font-size:.9rem;font-weight:600;
-    text-decoration:none;display:inline-block;transition:all .3s;font-family:'Outfit';}}
+    text-decoration:none;display:inline-block;transition:all .3s;font-family:'Plus Jakarta Sans';}}
 .nav-btn:hover{{background:rgba(120, 120, 120, 0.1);color:var(--text-primary)!important;}}
 .nav-btn.active{{background:rgba(120, 120, 120, 0.15);color:var(--text-primary)!important;
     border-bottom:3px solid var(--accent-green);border-radius:8px 8px 0 0;}}
 
 /* ── HERO ────────────────────────────────────────────────────────────────── */
 .hero-banner{{
-    background: radial-gradient(circle at 50% 0%, rgba(14,165,233,0.1) 0%, transparent 70%);
+    background: var(--hero-gradient);
     padding:4rem 3rem 3rem;text-align:center;position:relative;overflow:hidden;
     border-bottom: 1px solid var(--card-border);
 }}
-.hero-title{{font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:3rem;
-    letter-spacing:-.03em;margin-bottom:.5rem; text-shadow: var(--glow-blue);}}
+.hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:3rem;
+    letter-spacing:.08em;margin-bottom:.5rem;}}
 .hero-title span{{color:var(--accent-green);}}
 .hero-sub{{font-size:1.2rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
 .hero-badges{{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}}
@@ -122,7 +127,7 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 
 /* ── PAGE SECTION ────────────────────────────────────────────────────────── */
 .page-section{{padding:2rem 2.5rem;}}
-.section-heading{{font-family:\'Space Grotesk\',sans-serif;font-weight:700;font-size:1.6rem;
+.section-heading{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.6rem;
     color:var(--text-primary);margin-bottom:.4rem;}}
 .section-sub{{font-size:.95rem;color:var(--text-secondary);margin-bottom:1.5rem;}}
 
@@ -143,9 +148,9 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 
 /* ── BUTTONS ─────────────────────────────────────────────────────────────── */
 .stButton>button{{
-    background:linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-green) 100%)!important;
+    background:linear-gradient(135deg, var(--accent-blue) 0%, var(--accent-purple) 50%, var(--accent-green) 100%)!important;
     color:white!important;border:none!important;border-radius:10px!important;
-    padding:.7rem 2rem!important;font-family:\'Space Grotesk\'!important;font-weight:700!important;
+    padding:.7rem 2rem!important;font-family:\'Sora\'!important;font-weight:700!important;
     font-size:1rem!important;width:100%!important; box-shadow: var(--glow-blue); transition:all .3s!important;}}
 .stButton>button:hover{{transform:translateY(-2px); box-shadow: var(--glow-green)!important;}}
 
@@ -223,7 +228,7 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
 
 /* ── TABS ────────────────────────────────────────────────────────────────── */
 .stTabs [data-baseweb="tab-list"]{{background:transparent!important;border-bottom:2px solid var(--card-border)!important;gap:0!important;padding:0 1rem!important;}}
-.stTabs [data-baseweb="tab"]{{font-family:\'Space Grotesk\'!important;font-weight:600!important;
+.stTabs [data-baseweb="tab"]{{font-family:\'Sora\'!important;font-weight:600!important;
     color:var(--text-secondary)!important;font-size:1rem!important;padding:1rem 1.5rem!important;
     border-radius:0!important;background:transparent!important;}}
 .stTabs [aria-selected="true"]{{color:var(--accent-blue)!important;border-bottom:3px solid var(--accent-blue)!important;}}
@@ -272,8 +277,8 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
 
 /* ── ENHANCED TYPOGRAPHY ──────────────────────────────────────────────────── */
 :root {{
-    --font-sans: 'Outfit', 'Inter', sans-serif;
-    --font-display: 'Space Grotesk', 'Outfit', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-display: 'Sora', 'Plus Jakarta Sans', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
     --radius-sm: 10px;
     --radius-md: 16px;
@@ -368,7 +373,7 @@ div[data-testid="stVerticalBlock"]:has(.sticky-nav-marker) button {{
     color: var(--text-secondary) !important;
     font-weight: 600 !important;
     height: 46px !important;
-    font-family: 'Space Grotesk', sans-serif !important;
+    font-family: 'Sora', sans-serif !important;
     font-size: 0.95rem !important;
     transition: all 0.25s ease !important;
     margin: 0 !important;
@@ -414,6 +419,134 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button {{
 div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover {{
     transform: scale(1.12) rotate(12deg) !important;
     box-shadow: 0 12px 40px rgba(14, 165, 233, 0.5) !important;
+}}
+
+/* ── CINZEL GOLD TYPEWRITER HERO TITLE ──────────────────────────────────── */
+@keyframes goldShift {{
+    0% {{ background-position: 0%; }}
+    100% {{ background-position: 200%; }}
+}}
+@keyframes caretBlink {{
+    0%, 100% {{ opacity: 1; }}
+    50% {{ opacity: 0; }}
+}}
+.hero-title {{
+    font-family: 'Cinzel', serif !important;
+    font-weight: 900 !important;
+    font-size: clamp(2rem, 5vw, 3.2rem) !important;
+    background: linear-gradient(90deg, #b45309, #f59e0b, #fde68a, #f59e0b, #b45309) !important;
+    background-size: 200% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: goldShift 3s linear infinite !important;
+    letter-spacing: .08em !important;
+    text-shadow: none !important;
+    display: inline-block !important;
+}}
+.hero-title span {{
+    -webkit-text-fill-color: transparent !important;
+    background: inherit !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}}
+#hero-title-tw {{
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    background: linear-gradient(90deg, #b45309, #f59e0b, #fde68a, #f59e0b, #b45309);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShift 3s linear infinite;
+    letter-spacing: .08em;
+    display: inline-block;
+    margin-bottom: .5rem;
+}}
+#hero-title-tw::after {{
+    content: '|';
+    -webkit-text-fill-color: #f59e0b;
+    animation: caretBlink 1s step-end infinite;
+    margin-left: 2px;
+    font-weight: 400;
+}}
+#hero-title-tw.done::after {{
+    animation: caretBlink 1s step-end infinite;
+}}
+</style>
+<script>
+(function() {{
+    function runTypewriter() {{
+        var el = document.getElementById('hero-title-tw');
+        if (!el) {{ setTimeout(runTypewriter, 300); return; }}
+        var full = el.getAttribute('data-text') || el.textContent.trim();
+        el.setAttribute('data-text', full);
+        el.textContent = '';
+        var i = 0;
+        function type() {{
+            if (i <= full.length) {{
+                el.textContent = full.slice(0, i);
+                i++;
+                setTimeout(type, i === 1 ? 600 : 90);
+            }} else {{
+                el.classList.add('done');
+                setTimeout(function() {{
+                    i = 0;
+                    el.classList.remove('done');
+                    setTimeout(function() {{
+                        el.textContent = '';
+                        type();
+                    }}, 400);
+                }}, 2800);
+            }}
+        }}
+        type();
+    }}
+    document.addEventListener('DOMContentLoaded', runTypewriter);
+    setTimeout(runTypewriter, 800);
+}})();
+</script>""",
+    unsafe_allow_html=True)
+
+.stat-pill {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.07) 0%, rgba(5,150,105,0.07) 100%) !important;
+    border-color: rgba(79,70,229,0.2) !important;
+}}
+.stat-val {{ color: var(--accent-blue) !important; }}
+.stat-val.green {{ color: var(--accent-green) !important; }}
+
+.info-box {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
+    border-left-color: var(--accent-blue) !important;
+}}
+
+/* Colorful hero badges */
+.hero-badge {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(124,58,237,0.1)) !important;
+    border-color: rgba(79,70,229,0.3) !important;
+    color: var(--accent-blue) !important;
+}}
+.hero-badge.green {{
+    background: linear-gradient(135deg, rgba(5,150,105,0.12), rgba(13,148,136,0.12)) !important;
+    border-color: var(--accent-green) !important;
+    color: var(--accent-green) !important;
+}}
+
+/* Navbar logo gradient */
+.navbar-logo {{
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)) !important;
+}}
+
+/* Perf table header tint */
+.perf-table th {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
+}}
+
+/* Footer tint */
+.site-footer {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(5,150,105,0.06)) !important;
+    border-top-color: rgba(79,70,229,0.2) !important;
 }}
 </style>
 """, unsafe_allow_html=True)
@@ -838,7 +971,7 @@ if st.button(theme_icon, key="theme_fab_btn"):
 if PAGE == "home":
     st.markdown("""
     <div class="hero-banner">
-        <div class="hero-title">Graph<span>ACSM</span>-Net</div>
+        <div id="hero-title-tw" data-text="GraphACSM-Net">GraphACSM-Net</div>
         <div class="hero-sub">A Web Server for Graph Neural Network-Based Anticancer Activity Prediction</div>
         <div class="hero-badges">
             <span class="hero-badge green">✓ GCN · GAT · GT · MSMP</span>
