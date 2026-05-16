@@ -83,7 +83,7 @@ st.markdown(f"""
 html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{{
     background:var(--bg-gradient, var(--bg-color))!important;color:var(--text-primary)!important;
     font-family:'Plus Jakarta Sans',sans-serif!important; transition: background 0.3s ease;
-    font-size: 16px !important;
+    font-size: 15px !important;
 }}
 [data-testid="block-container"]{{padding:0!important;max-width:100%!important;}}
 
@@ -115,14 +115,14 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 /* ── HERO ────────────────────────────────────────────────────────────────── */
 .hero-banner{{
     background: linear-gradient(135deg, #1c0700 0%, #7c2d12 25%, #c2410c 55%, #431407 100%) !important;
-    padding:4rem 3rem 3rem;text-align:center;position:relative;overflow:hidden;
+    padding:5.5rem 3rem 4rem;text-align:center;position:relative;overflow:hidden;
     border-bottom: 1px solid rgba(251,146,60,0.4);
 }}
 .hero-banner .hero-sub{{color:rgba(255,237,213,0.85) !important;}}
-.hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:2.2rem;
+.hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:2rem;
     letter-spacing:.08em;margin-bottom:.5rem;}}
 .hero-title span{{color:var(--accent-green);}}
-.hero-sub{{font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
+.hero-sub{{font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
 .hero-badges{{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}}
 .hero-badge{{background:rgba(255,255,255,0.55);border:1.5px solid rgba(99,102,241,0.35);
     border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:#3730a3;font-weight:700;
@@ -132,7 +132,7 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 
 /* ── PAGE SECTION ────────────────────────────────────────────────────────── */
 .page-section{{padding:2rem 2.5rem;}}
-.section-heading{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.6rem;
+.section-heading{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.4rem;
     color:var(--text-primary);margin-bottom:.4rem;}}
 .section-sub{{font-size:.95rem;color:var(--text-secondary);margin-bottom:1.5rem;}}
 
@@ -147,7 +147,7 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .stat-grid{{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0;}}
 .stat-pill{{background:rgba(120,120,120,0.05);border:1px solid var(--card-border);border-radius:12px;
     padding:.8rem 1.2rem;text-align:center;flex:1;min-width:90px;}}
-.stat-val{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.6rem;color:var(--accent-blue);}}
+.stat-val{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.4rem;color:var(--accent-blue);}}
 .stat-val.green{{color:var(--accent-green);}}
 .stat-lbl{{font-size:.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;font-weight:600;}}
 
@@ -186,7 +186,7 @@ div[data-testid="stTextInputRootElement"]:focus-within, div[data-testid="stTextA
     border-color:var(--accent-blue)!important;
     box-shadow:var(--glow-blue)!important;
 }}
-label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.95rem!important;}}
+label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.87rem!important;}}
 
 .stSelectbox>div>div, .stSelectbox div[data-baseweb="select"], .stSelectbox [data-baseweb="select"]>div{{
     background:var(--card-bg)!important;
@@ -209,7 +209,7 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
     animation: pulseGlow 2s infinite alternate;}}
 .result-inactive{{background:rgba(239,68,68,0.1);border:2px solid var(--accent-red);
     border-radius:16px;padding:1.5rem;text-align:center;margin:1rem 0; box-shadow: 0 0 15px rgba(239,68,68,0.3);}}
-.result-label{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.5rem;margin-bottom:.3rem;}}
+.result-label{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.3rem;margin-bottom:.3rem;}}
 .result-sub{{font-size:.9rem;color:var(--text-secondary);}}
 
 .conf-wrap{{margin:.8rem 0;}}
@@ -292,14 +292,14 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
 }}
 
 .hero-title {{
-    font-size: clamp(1.5rem, 3.5vw, 2.4rem) !important;
+    font-size: clamp(1.4rem, 3vw, 2.2rem) !important;
     font-family: var(--font-display) !important;
     font-weight: 900 !important;
     line-height: 1.05 !important;
     letter-spacing: -0.04em !important;
 }}
 .hero-sub {{
-    font-size: clamp(0.82rem, 1.5vw, 1rem) !important;
+    font-size: clamp(0.8rem, 1.3vw, 0.95rem) !important;
     font-weight: 400 !important;
     letter-spacing: 0.01em !important;
     max-width: 680px;
@@ -438,7 +438,7 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 .hero-title {{
     font-family: 'Cinzel', serif !important;
     font-weight: 900 !important;
-    font-size: clamp(1.9rem, 4.5vw, 3rem) !important;
+    font-size: clamp(1.4rem, 3vw, 2.2rem) !important;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
     background: none !important;
@@ -454,7 +454,7 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 #hero-title-tw {{
     font-family: 'Cinzel', serif;
     font-weight: 900;
-    font-size: clamp(1.9rem, 4.5vw, 3rem);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
     color: #ffffff;
     -webkit-text-fill-color: #ffffff;
     background: none;
