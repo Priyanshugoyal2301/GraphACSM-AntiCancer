@@ -474,6 +474,38 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 #hero-title-tw.done::after {{
     animation: caretBlink 1s step-end infinite;
 }}
+
+/* ── LIGHT MODE EXTRA COLOUR ─────────────────────────────────────────────── */
+.stat-pill {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.07) 0%, rgba(5,150,105,0.07) 100%) !important;
+    border-color: rgba(79,70,229,0.2) !important;
+}}
+.stat-val {{ color: var(--accent-blue) !important; }}
+.stat-val.green {{ color: var(--accent-green) !important; }}
+.info-box {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
+    border-left-color: var(--accent-blue) !important;
+}}
+.hero-badge {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(124,58,237,0.1)) !important;
+    border-color: rgba(79,70,229,0.3) !important;
+    color: var(--accent-blue) !important;
+}}
+.hero-badge.green {{
+    background: linear-gradient(135deg, rgba(5,150,105,0.12), rgba(13,148,136,0.12)) !important;
+    border-color: var(--accent-green) !important;
+    color: var(--accent-green) !important;
+}}
+.navbar-logo {{
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)) !important;
+}}
+.perf-table th {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
+}}
+.site-footer {{
+    background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(5,150,105,0.06)) !important;
+    border-top-color: rgba(79,70,229,0.2) !important;
+}}
 </style>
 <script>
 (function() {{
@@ -509,47 +541,7 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 </script>""",
     unsafe_allow_html=True)
 
-.stat-pill {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.07) 0%, rgba(5,150,105,0.07) 100%) !important;
-    border-color: rgba(79,70,229,0.2) !important;
-}}
-.stat-val {{ color: var(--accent-blue) !important; }}
-.stat-val.green {{ color: var(--accent-green) !important; }}
 
-.info-box {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
-    border-left-color: var(--accent-blue) !important;
-}}
-
-/* Colorful hero badges */
-.hero-badge {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(124,58,237,0.1)) !important;
-    border-color: rgba(79,70,229,0.3) !important;
-    color: var(--accent-blue) !important;
-}}
-.hero-badge.green {{
-    background: linear-gradient(135deg, rgba(5,150,105,0.12), rgba(13,148,136,0.12)) !important;
-    border-color: var(--accent-green) !important;
-    color: var(--accent-green) !important;
-}}
-
-/* Navbar logo gradient */
-.navbar-logo {{
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)) !important;
-}}
-
-/* Perf table header tint */
-.perf-table th {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
-}}
-
-/* Footer tint */
-.site-footer {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(5,150,105,0.06)) !important;
-    border-top-color: rgba(79,70,229,0.2) !important;
-}}
-</style>
-""", unsafe_allow_html=True)
 
 
 # ── Constants ─────────────────────────────────────────────────────────────────
