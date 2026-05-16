@@ -53,8 +53,8 @@ theme_vars = """
     --bg-gradient: linear-gradient(135deg, #EEF2FF 0%, #F0FDF4 40%, #FFF7ED 80%, #EEF2FF 100%);
     --text-primary: #0F172A;
     --text-secondary: #475569;
-    --card-bg: rgba(255, 255, 255, 0.78);
-    --card-border: rgba(99, 102, 241, 0.18);
+    --card-bg: rgba(255, 255, 255, 0.60);
+    --card-border: rgba(99, 102, 241, 0.22);
     --nav-bg: rgba(238, 242, 255, 0.90);
     --accent-blue: #4F46E5;
     --accent-green: #059669;
@@ -121,9 +121,11 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .hero-title span{{color:var(--accent-green);}}
 .hero-sub{{font-size:1.2rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
 .hero-badges{{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}}
-.hero-badge{{background:rgba(120,120,120,0.1);border:1px solid var(--card-border);
-    border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:var(--text-primary);font-weight:600;backdrop-filter:var(--glass-blur);}}
-.hero-badge.green{{background:rgba(16,185,129,0.1);border-color:var(--accent-green);color:var(--accent-green);}}
+.hero-badge{{background:rgba(255,255,255,0.55);border:1.5px solid rgba(99,102,241,0.35);
+    border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:#3730a3;font-weight:700;
+    backdrop-filter:var(--glass-blur);box-shadow:0 2px 12px rgba(99,102,241,0.1);}}
+.hero-badge.green{{background:rgba(255,255,255,0.55);border-color:rgba(5,150,105,0.45);color:#065f46;
+    box-shadow:0 2px 12px rgba(5,150,105,0.12);}}
 
 /* ── PAGE SECTION ────────────────────────────────────────────────────────── */
 .page-section{{padding:2rem 2.5rem;}}
@@ -487,14 +489,16 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
     border-left-color: var(--accent-blue) !important;
 }}
 .hero-badge {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(124,58,237,0.1)) !important;
-    border-color: rgba(79,70,229,0.3) !important;
-    color: var(--accent-blue) !important;
+    background: rgba(255,255,255,0.6) !important;
+    border: 1.5px solid rgba(99,102,241,0.35) !important;
+    color: #3730a3 !important;
+    box-shadow: 0 2px 12px rgba(99,102,241,0.1) !important;
 }}
 .hero-badge.green {{
-    background: linear-gradient(135deg, rgba(5,150,105,0.12), rgba(13,148,136,0.12)) !important;
-    border-color: var(--accent-green) !important;
-    color: var(--accent-green) !important;
+    background: rgba(255,255,255,0.6) !important;
+    border-color: rgba(5,150,105,0.45) !important;
+    color: #065f46 !important;
+    box-shadow: 0 2px 12px rgba(5,150,105,0.12) !important;
 }}
 .navbar-logo {{
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)) !important;
