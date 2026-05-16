@@ -36,45 +36,39 @@ theme_href = f"?page={PAGE}&dark={theme_val}"
 theme_icon = "☀️" if dark_mode else "🌙"
 
 theme_vars = """
-    --bg-color: #0A0A0A;
-    --bg-gradient: linear-gradient(135deg, #0A0A0A 0%, #111111 50%, #1A0800 100%);
-    --text-primary: #F5F0EB;
-    --text-secondary: #B8A99A;
-    --card-bg: rgba(30, 20, 10, 0.7);
-    --card-border: rgba(251, 146, 60, 0.25);
-    --nav-bg: rgba(10, 8, 5, 0.85);
-    --accent-blue: #FB923C;
-    --accent-green: #F97316;
-    --accent-purple: #FDBA74;
-    --accent-teal: #EA580C;
-    --accent-orange: #FB923C;
+    --bg-color: #0A0F1C;
+    --text-primary: #E2E8F0;
+    --text-secondary: #94A3B8;
+    --card-bg: rgba(30, 41, 59, 0.4);
+    --card-border: rgba(14, 165, 233, 0.2);
+    --nav-bg: rgba(10, 15, 28, 0.7);
+    --accent-blue: #0ea5e9;
+    --accent-green: #10b981;
     --accent-red: #ef4444;
-    --glow-blue: 0 0 20px rgba(251, 146, 60, 0.35);
-    --glow-green: 0 4px 20px rgba(249, 115, 22, 0.35);
-    --glow-purple: 0 4px 20px rgba(253, 186, 116, 0.25);
-    --glass-blur: blur(20px);
-    --grid-color: rgba(251, 146, 60, 0.06);
-    --hero-gradient: linear-gradient(135deg, #0A0A0A 0%, #1A0800 50%, #0F0500 100%);
+    --accent-orange: #FB923C;
+    --glow-blue: 0 0 15px rgba(14, 165, 233, 0.3);
+    --grid-color: rgba(56, 189, 248, 0.08);
+    --hero-gradient: linear-gradient(135deg, #1a0800 0%, #7c2d12 30%, #c2410c 60%, #1a0800 100%);
 """ if dark_mode else """
-    --bg-color: #1A0E00;
-    --bg-gradient: linear-gradient(135deg, #1A0E00 0%, #0F0800 40%, #200A00 80%, #1A0E00 100%);
-    --text-primary: #FFF8F0;
-    --text-secondary: #C8A882;
-    --card-bg: rgba(40, 20, 5, 0.75);
-    --card-border: rgba(251, 146, 60, 0.3);
-    --nav-bg: rgba(15, 8, 0, 0.92);
-    --accent-blue: #FB923C;
-    --accent-green: #F97316;
-    --accent-purple: #FDBA74;
-    --accent-teal: #EA580C;
+    --bg-color: #EEF2FF;
+    --bg-gradient: linear-gradient(135deg, #EEF2FF 0%, #F0FDF4 40%, #FFF7ED 80%, #EEF2FF 100%);
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --card-bg: rgba(255, 255, 255, 0.60);
+    --card-border: rgba(99, 102, 241, 0.22);
+    --nav-bg: rgba(238, 242, 255, 0.90);
+    --accent-blue: #4F46E5;
+    --accent-green: #059669;
+    --accent-purple: #7C3AED;
+    --accent-teal: #0D9488;
     --accent-orange: #FB923C;
-    --accent-red: #ef4444;
-    --glow-blue: 0 4px 20px rgba(251, 146, 60, 0.4);
-    --glow-green: 0 4px 20px rgba(249, 115, 22, 0.4);
-    --glow-purple: 0 4px 20px rgba(253, 186, 116, 0.3);
+    --accent-red: #dc2626;
+    --glow-blue: 0 4px 20px rgba(79, 70, 229, 0.22);
+    --glow-green: 0 4px 20px rgba(5, 150, 105, 0.22);
+    --glow-purple: 0 4px 20px rgba(124, 58, 237, 0.22);
     --glass-blur: blur(20px);
-    --grid-color: rgba(251, 146, 60, 0.06);
-    --hero-gradient: linear-gradient(135deg, #1A0E00 0%, #0F0500 35%, #200A00 70%, #1A0E00 100%);
+    --grid-color: rgba(79, 70, 229, 0.05);
+    --hero-gradient: linear-gradient(135deg, #431407 0%, #9a3412 30%, #ea580c 60%, #431407 100%);
 """
 
 st.markdown(f"""
@@ -89,7 +83,6 @@ st.markdown(f"""
 html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{{
     background:var(--bg-gradient, var(--bg-color))!important;color:var(--text-primary)!important;
     font-family:'Plus Jakarta Sans',sans-serif!important; transition: background 0.3s ease;
-    font-size: 14px !important;
 }}
 [data-testid="block-container"]{{padding:0!important;max-width:100%!important;}}
 
@@ -120,10 +113,11 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 
 /* ── HERO ────────────────────────────────────────────────────────────────── */
 .hero-banner{{
-    background: var(--hero-gradient);
+    background: linear-gradient(135deg, #1c0700 0%, #7c2d12 25%, #c2410c 55%, #431407 100%) !important;
     padding:4rem 3rem 3rem;text-align:center;position:relative;overflow:hidden;
-    border-bottom: 1px solid var(--card-border);
+    border-bottom: 1px solid rgba(251,146,60,0.4);
 }}
+.hero-banner .hero-sub{{color:rgba(255,237,213,0.85) !important;}}
 .hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:2.2rem;
     letter-spacing:.08em;margin-bottom:.5rem;}}
 .hero-title span{{color:var(--accent-green);}}
@@ -191,7 +185,7 @@ div[data-testid="stTextInputRootElement"]:focus-within, div[data-testid="stTextA
     border-color:var(--accent-blue)!important;
     box-shadow:var(--glow-blue)!important;
 }}
-label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.8rem!important;}}
+label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.9rem!important;}}
 
 .stSelectbox>div>div, .stSelectbox div[data-baseweb="select"], .stSelectbox [data-baseweb="select"]>div{{
     background:var(--card-bg)!important;
@@ -487,36 +481,37 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 
 /* ── LIGHT MODE EXTRA COLOUR ─────────────────────────────────────────────── */
 .stat-pill {{
-    background: linear-gradient(135deg, rgba(251,146,60,0.1) 0%, rgba(249,115,22,0.1) 100%) !important;
-    border-color: rgba(251,146,60,0.25) !important;
+    background: linear-gradient(135deg, rgba(79,70,229,0.07) 0%, rgba(5,150,105,0.07) 100%) !important;
+    border-color: rgba(79,70,229,0.2) !important;
 }}
 .stat-val {{ color: var(--accent-blue) !important; }}
 .stat-val.green {{ color: var(--accent-green) !important; }}
 .info-box {{
-    background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.1)) !important;
+    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
     border-left-color: var(--accent-blue) !important;
 }}
 .hero-badge {{
-    background: rgba(251,146,60,0.15) !important;
-    border: 1.5px solid rgba(251,146,60,0.4) !important;
-    color: #FDBA74 !important;
-    box-shadow: 0 2px 12px rgba(251,146,60,0.15) !important;
+    background: rgba(251,146,60,0.18) !important;
+    border: 1.5px solid rgba(251,146,60,0.5) !important;
+    color: #fff7ed !important;
+    box-shadow: 0 2px 12px rgba(251,146,60,0.2) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3) !important;
 }}
 .hero-badge.green {{
-    background: rgba(249,115,22,0.15) !important;
-    border-color: rgba(249,115,22,0.4) !important;
-    color: #FED7AA !important;
-    box-shadow: 0 2px 12px rgba(249,115,22,0.15) !important;
+    background: rgba(249,115,22,0.2) !important;
+    border-color: rgba(249,115,22,0.5) !important;
+    color: #ffedd5 !important;
+    box-shadow: 0 2px 12px rgba(249,115,22,0.2) !important;
 }}
 .navbar-logo {{
-    background: linear-gradient(135deg, #FB923C, #EA580C) !important;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)) !important;
 }}
 .perf-table th {{
-    background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.1)) !important;
+    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
 }}
 .site-footer {{
-    background: linear-gradient(135deg, rgba(251,146,60,0.06), rgba(249,115,22,0.06)) !important;
-    border-top-color: rgba(251,146,60,0.2) !important;
+    background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(5,150,105,0.06)) !important;
+    border-top-color: rgba(79,70,229,0.2) !important;
 }}
 </style>
 <script>
@@ -1006,8 +1001,21 @@ if PAGE == "home":
             </div>
             """, unsafe_allow_html=True)
 
-            # Drug selector — selecting auto-fills SMILES in the predict panel
-            sel_home = st.selectbox("Reference Compound", list(EXAMPLES.keys()), key="home_fda_sel")
+            # Drug selector — callback writes SMILES into session state before text_input renders
+            def _home_fda_changed():
+                chosen = st.session_state["home_fda_sel"]
+                st.session_state["home_smi_bento"] = EXAMPLES.get(chosen, "")
+
+            sel_home = st.selectbox(
+                "Reference Compound",
+                list(EXAMPLES.keys()),
+                key="home_fda_sel",
+                on_change=_home_fda_changed,
+            )
+            # Seed session state on very first load
+            if "home_smi_bento" not in st.session_state:
+                st.session_state["home_smi_bento"] = EXAMPLES[list(EXAMPLES.keys())[0]]
+
             smi_ex = EXAMPLES[sel_home]
             meta = EXAMPLES_META.get(sel_home, {})
             drug_color = meta.get("color", "#FB923C")
@@ -1121,10 +1129,8 @@ if PAGE == "home":
             </div>
             """, unsafe_allow_html=True)
 
-            # Auto-fill SMILES from FDA selector
-            default_smi = EXAMPLES.get(sel_home, "")
+            # Auto-fill SMILES from FDA selector (driven by session_state["home_smi_bento"])
             quick_smi = st.text_input("Enter SMILES string",
-                                     value=default_smi,
                                      placeholder="Paste SMILES here, or select a drug on the left...",
                                      key="home_smi_bento")
 
