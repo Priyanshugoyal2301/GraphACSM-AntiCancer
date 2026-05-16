@@ -1094,6 +1094,20 @@ if PAGE == "home":
             <div style="background:{drug_color}11; border:1px solid {drug_color}33; border-radius:12px; padding:0.8rem; margin-bottom:1rem;">
                 <div style="font-family:\'Space Grotesk\';font-weight:800;font-size:1.1rem;color:{drug_color};">{sel}</div>
                 <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:4px;">{meta.get('desc','')}</div>
+                <div style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid {drug_color}22;">
+                    <div style="font-size:0.72rem;color:var(--text-secondary);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:0.4rem;">SMILES</div>
+                    <div style="font-family:\'JetBrains Mono\';font-size:0.7rem;color:var(--text-primary);word-break:break-all;line-height:1.5;background:rgba(0,0,0,0.04);border-radius:6px;padding:0.4rem 0.6rem;">{smi_ex}</div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.6rem;">
+                    <div style="background:{drug_color}0D;border:1px solid {drug_color}22;border-radius:8px;padding:0.5rem 0.7rem;text-align:center;">
+                        <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Mol. Weight</div>
+                        <div style="font-family:\'Sora\',sans-serif;font-weight:700;font-size:1rem;color:{drug_color};margin-top:2px;">{Descriptors.MolWt(Chem.MolFromSmiles(smi_ex)):.2f} <span style="font-size:0.7rem;font-weight:400;">Da</span></div>
+                    </div>
+                    <div style="background:{drug_color}0D;border:1px solid {drug_color}22;border-radius:8px;padding:0.5rem 0.7rem;text-align:center;">
+                        <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">LogP</div>
+                        <div style="font-family:\'Sora\',sans-serif;font-weight:700;font-size:1rem;color:{drug_color};margin-top:2px;">{Descriptors.MolLogP(Chem.MolFromSmiles(smi_ex)):.3f}</div>
+                    </div>
+                </div>
             </div>
             """, unsafe_allow_html=True)
             
