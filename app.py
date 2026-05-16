@@ -36,38 +36,45 @@ theme_href = f"?page={PAGE}&dark={theme_val}"
 theme_icon = "☀️" if dark_mode else "🌙"
 
 theme_vars = """
-    --bg-color: #0A0F1C;
-    --text-primary: #E2E8F0;
-    --text-secondary: #94A3B8;
-    --card-bg: rgba(30, 41, 59, 0.4);
-    --card-border: rgba(14, 165, 233, 0.2);
-    --nav-bg: rgba(10, 15, 28, 0.7);
-    --accent-blue: #0ea5e9;
-    --accent-green: #10b981;
+    --bg-color: #0A0A0A;
+    --bg-gradient: linear-gradient(135deg, #0A0A0A 0%, #111111 50%, #1A0800 100%);
+    --text-primary: #F5F0EB;
+    --text-secondary: #B8A99A;
+    --card-bg: rgba(30, 20, 10, 0.7);
+    --card-border: rgba(251, 146, 60, 0.25);
+    --nav-bg: rgba(10, 8, 5, 0.85);
+    --accent-blue: #FB923C;
+    --accent-green: #F97316;
+    --accent-purple: #FDBA74;
+    --accent-teal: #EA580C;
+    --accent-orange: #FB923C;
     --accent-red: #ef4444;
-    --glow-blue: 0 0 15px rgba(14, 165, 233, 0.3);
-    --grid-color: rgba(56, 189, 248, 0.08);
-    --hero-gradient: linear-gradient(180deg, #0A0F1C 0%, #0F172A 100%);
-""" if dark_mode else """
-    --bg-color: #EEF2FF;
-    --bg-gradient: linear-gradient(135deg, #EEF2FF 0%, #F0FDF4 40%, #FFF7ED 80%, #EEF2FF 100%);
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --card-bg: rgba(255, 255, 255, 0.60);
-    --card-border: rgba(99, 102, 241, 0.22);
-    --nav-bg: rgba(238, 242, 255, 0.90);
-    --accent-blue: #4F46E5;
-    --accent-green: #059669;
-    --accent-purple: #7C3AED;
-    --accent-teal: #0D9488;
-    --accent-orange: #EA580C;
-    --accent-red: #dc2626;
-    --glow-blue: 0 4px 20px rgba(79, 70, 229, 0.22);
-    --glow-green: 0 4px 20px rgba(5, 150, 105, 0.22);
-    --glow-purple: 0 4px 20px rgba(124, 58, 237, 0.22);
+    --glow-blue: 0 0 20px rgba(251, 146, 60, 0.35);
+    --glow-green: 0 4px 20px rgba(249, 115, 22, 0.35);
+    --glow-purple: 0 4px 20px rgba(253, 186, 116, 0.25);
     --glass-blur: blur(20px);
-    --grid-color: rgba(79, 70, 229, 0.05);
-    --hero-gradient: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 35%, #DCFCE7 70%, #FFF7ED 100%);
+    --grid-color: rgba(251, 146, 60, 0.06);
+    --hero-gradient: linear-gradient(135deg, #0A0A0A 0%, #1A0800 50%, #0F0500 100%);
+""" if dark_mode else """
+    --bg-color: #1A0E00;
+    --bg-gradient: linear-gradient(135deg, #1A0E00 0%, #0F0800 40%, #200A00 80%, #1A0E00 100%);
+    --text-primary: #FFF8F0;
+    --text-secondary: #C8A882;
+    --card-bg: rgba(40, 20, 5, 0.75);
+    --card-border: rgba(251, 146, 60, 0.3);
+    --nav-bg: rgba(15, 8, 0, 0.92);
+    --accent-blue: #FB923C;
+    --accent-green: #F97316;
+    --accent-purple: #FDBA74;
+    --accent-teal: #EA580C;
+    --accent-orange: #FB923C;
+    --accent-red: #ef4444;
+    --glow-blue: 0 4px 20px rgba(251, 146, 60, 0.4);
+    --glow-green: 0 4px 20px rgba(249, 115, 22, 0.4);
+    --glow-purple: 0 4px 20px rgba(253, 186, 116, 0.3);
+    --glass-blur: blur(20px);
+    --grid-color: rgba(251, 146, 60, 0.06);
+    --hero-gradient: linear-gradient(135deg, #1A0E00 0%, #0F0500 35%, #200A00 70%, #1A0E00 100%);
 """
 
 st.markdown(f"""
@@ -82,6 +89,7 @@ st.markdown(f"""
 html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{{
     background:var(--bg-gradient, var(--bg-color))!important;color:var(--text-primary)!important;
     font-family:'Plus Jakarta Sans',sans-serif!important; transition: background 0.3s ease;
+    font-size: 14px !important;
 }}
 [data-testid="block-container"]{{padding:0!important;max-width:100%!important;}}
 
@@ -116,10 +124,10 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
     padding:4rem 3rem 3rem;text-align:center;position:relative;overflow:hidden;
     border-bottom: 1px solid var(--card-border);
 }}
-.hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:3rem;
+.hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:2.2rem;
     letter-spacing:.08em;margin-bottom:.5rem;}}
 .hero-title span{{color:var(--accent-green);}}
-.hero-sub{{font-size:1.2rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
+.hero-sub{{font-size:0.95rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
 .hero-badges{{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}}
 .hero-badge{{background:rgba(255,255,255,0.55);border:1.5px solid rgba(99,102,241,0.35);
     border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:#3730a3;font-weight:700;
@@ -183,7 +191,7 @@ div[data-testid="stTextInputRootElement"]:focus-within, div[data-testid="stTextA
     border-color:var(--accent-blue)!important;
     box-shadow:var(--glow-blue)!important;
 }}
-label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.9rem!important;}}
+label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.8rem!important;}}
 
 .stSelectbox>div>div, .stSelectbox div[data-baseweb="select"], .stSelectbox [data-baseweb="select"]>div{{
     background:var(--card-bg)!important;
@@ -289,14 +297,14 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
 }}
 
 .hero-title {{
-    font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem) !important;
     font-family: var(--font-display) !important;
     font-weight: 900 !important;
     line-height: 1.05 !important;
     letter-spacing: -0.04em !important;
 }}
 .hero-sub {{
-    font-size: clamp(1rem, 2vw, 1.35rem) !important;
+    font-size: clamp(0.82rem, 1.5vw, 1rem) !important;
     font-weight: 400 !important;
     letter-spacing: 0.01em !important;
     max-width: 680px;
@@ -435,8 +443,8 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 .hero-title {{
     font-family: 'Cinzel', serif !important;
     font-weight: 900 !important;
-    font-size: clamp(2rem, 5vw, 3.2rem) !important;
-    background: linear-gradient(90deg, #b45309, #f59e0b, #fde68a, #f59e0b, #b45309) !important;
+    font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
+    background: linear-gradient(90deg, #C2410C, #FB923C, #FED7AA, #FB923C, #C2410C) !important;
     background-size: 200% !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
@@ -455,8 +463,8 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 #hero-title-tw {{
     font-family: 'Cinzel', serif;
     font-weight: 900;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    background: linear-gradient(90deg, #b45309, #f59e0b, #fde68a, #f59e0b, #b45309);
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    background: linear-gradient(90deg, #C2410C, #FB923C, #FED7AA, #FB923C, #C2410C);
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -468,7 +476,7 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 }}
 #hero-title-tw::after {{
     content: '|';
-    -webkit-text-fill-color: #f59e0b;
+    -webkit-text-fill-color: #FB923C;
     animation: caretBlink 1s step-end infinite;
     margin-left: 2px;
     font-weight: 400;
@@ -479,36 +487,36 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
 
 /* ── LIGHT MODE EXTRA COLOUR ─────────────────────────────────────────────── */
 .stat-pill {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.07) 0%, rgba(5,150,105,0.07) 100%) !important;
-    border-color: rgba(79,70,229,0.2) !important;
+    background: linear-gradient(135deg, rgba(251,146,60,0.1) 0%, rgba(249,115,22,0.1) 100%) !important;
+    border-color: rgba(251,146,60,0.25) !important;
 }}
 .stat-val {{ color: var(--accent-blue) !important; }}
 .stat-val.green {{ color: var(--accent-green) !important; }}
 .info-box {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
+    background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.1)) !important;
     border-left-color: var(--accent-blue) !important;
 }}
 .hero-badge {{
-    background: rgba(255,255,255,0.6) !important;
-    border: 1.5px solid rgba(99,102,241,0.35) !important;
-    color: #3730a3 !important;
-    box-shadow: 0 2px 12px rgba(99,102,241,0.1) !important;
+    background: rgba(251,146,60,0.15) !important;
+    border: 1.5px solid rgba(251,146,60,0.4) !important;
+    color: #FDBA74 !important;
+    box-shadow: 0 2px 12px rgba(251,146,60,0.15) !important;
 }}
 .hero-badge.green {{
-    background: rgba(255,255,255,0.6) !important;
-    border-color: rgba(5,150,105,0.45) !important;
-    color: #065f46 !important;
-    box-shadow: 0 2px 12px rgba(5,150,105,0.12) !important;
+    background: rgba(249,115,22,0.15) !important;
+    border-color: rgba(249,115,22,0.4) !important;
+    color: #FED7AA !important;
+    box-shadow: 0 2px 12px rgba(249,115,22,0.15) !important;
 }}
 .navbar-logo {{
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green)) !important;
+    background: linear-gradient(135deg, #FB923C, #EA580C) !important;
 }}
 .perf-table th {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(13,148,136,0.08)) !important;
+    background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.1)) !important;
 }}
 .site-footer {{
-    background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(5,150,105,0.06)) !important;
-    border-top-color: rgba(79,70,229,0.2) !important;
+    background: linear-gradient(135deg, rgba(251,146,60,0.06), rgba(249,115,22,0.06)) !important;
+    border-top-color: rgba(251,146,60,0.2) !important;
 }}
 </style>
 <script>
@@ -980,39 +988,159 @@ if PAGE == "home":
 
     st.markdown('<div class="page-section">', unsafe_allow_html=True)
 
-    # ── BENTO GRID ROW 1: PRIMARY COMMAND CENTER ─────────────────────────────
-    col_pred, col_stats = st.columns([6.2, 3.8], gap="large")
+    # ── HOME: 3-COLUMN LAYOUT ─────────────────────────────────────────────────
+    col_fda, col_welcome, col_predict = st.columns([2.8, 3.5, 3.7], gap="large")
 
-    with col_pred:
+    # ── LEFT: FDA Drug Explorer ───────────────────────────────────────────────
+    with col_fda:
         with st.container(border=True):
             st.markdown("""
-            <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem;">
-                <div style="background:var(--accent-green)22;padding:10px;border-radius:12px;">
-                    <span style="font-size:1.8rem;">🚀</span>
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.9rem;">
+                <span style="font-size:1.2rem;">🧪</span>
+                <div style="font-family:'Space Grotesk';font-weight:800;font-size:0.95rem;color:var(--text-primary);">
+                    FDA Example Drugs
+                </div>
+            </div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:0.8rem;line-height:1.5;">
+                Select a reference compound to explore its structure and auto-fill the prediction panel.
+            </div>
+            """, unsafe_allow_html=True)
+
+            # Drug selector — selecting auto-fills SMILES in the predict panel
+            sel_home = st.selectbox("Reference Compound", list(EXAMPLES.keys()), key="home_fda_sel")
+            smi_ex = EXAMPLES[sel_home]
+            meta = EXAMPLES_META.get(sel_home, {})
+            drug_color = meta.get("color", "#FB923C")
+
+            st.markdown(f"""
+            <div style="background:{drug_color}18; border:1px solid {drug_color}40; border-radius:12px; padding:0.75rem; margin-bottom:0.8rem;">
+                <div style="font-family:'Space Grotesk';font-weight:800;font-size:1rem;color:{drug_color};">{sel_home}</div>
+                <div style="font-size:0.75rem;color:var(--text-secondary);margin-top:3px;">{meta.get('desc','')}</div>
+                <div style="display:inline-block;margin-top:0.5rem;padding:0.2rem 0.6rem;border-radius:20px;font-size:0.65rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;background:{drug_color}22;border:1px solid {drug_color}55;color:{drug_color};">{meta.get('tag','')}</div>
+                <div style="margin-top:0.65rem;padding-top:0.65rem;border-top:1px solid {drug_color}22;">
+                    <div style="font-size:0.65rem;color:var(--text-secondary);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:0.3rem;">SMILES</div>
+                    <div style="font-family:'JetBrains Mono';font-size:0.62rem;color:var(--text-primary);word-break:break-all;line-height:1.5;background:rgba(0,0,0,0.25);border-radius:6px;padding:0.35rem 0.5rem;">{smi_ex}</div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-top:0.5rem;">
+                    <div style="background:{drug_color}10;border:1px solid {drug_color}22;border-radius:8px;padding:0.4rem 0.5rem;text-align:center;">
+                        <div style="font-size:0.6rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.05em;">Mol. Weight</div>
+                        <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:{drug_color};margin-top:1px;">{Descriptors.MolWt(Chem.MolFromSmiles(smi_ex)):.2f} <span style="font-size:0.6rem;font-weight:400;">Da</span></div>
+                    </div>
+                    <div style="background:{drug_color}10;border:1px solid {drug_color}22;border-radius:8px;padding:0.4rem 0.5rem;text-align:center;">
+                        <div style="font-size:0.6rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.05em;">LogP</div>
+                        <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:0.9rem;color:{drug_color};margin-top:1px;">{Descriptors.MolLogP(Chem.MolFromSmiles(smi_ex)):.3f}</div>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+            t2d_h, t3d_h = st.tabs(["2D View", "3D View"])
+            with t2d_h:
+                svg_h = mol_to_svg(smi_ex, (320, 200), dark=dark_mode)
+                if svg_h: st.markdown(svg_img_tag(svg_h), unsafe_allow_html=True)
+            with t3d_h:
+                components.html(make_3d_viewer(smi_ex, height="200px", dark=dark_mode), height=212)
+
+    # ── MIDDLE: Welcome / About ───────────────────────────────────────────────
+    with col_welcome:
+        with st.container(border=True):
+            st.markdown("""
+            <div style="margin-bottom:1rem;">
+                <div style="font-family:'Cinzel',serif;font-weight:900;font-size:1.25rem;
+                     background:linear-gradient(90deg,#C2410C,#FB923C,#FED7AA,#FB923C,#C2410C);
+                     background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                     background-clip:text;animation:goldShift 3s linear infinite;letter-spacing:.05em;">
+                    Welcome to GraphACSM-Net
+                </div>
+            </div>
+            <div style="font-size:0.82rem;color:var(--text-primary);line-height:1.75;margin-bottom:1rem;">
+                GraphACSM-Net is an advanced web-based platform designed for the rapid prediction and evaluation
+                of anticancer small molecules using integrated machine learning and graph deep learning approaches.
+                The platform combines molecular descriptors, graph-based molecular representations, and multi-head
+                predictive modeling to simultaneously predict:
+            </div>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem;">
+                <div style="background:rgba(251,146,60,0.1);border:1px solid rgba(251,146,60,0.3);border-radius:10px;
+                     padding:0.55rem 0.8rem;font-size:0.8rem;color:var(--text-primary);display:flex;align-items:center;gap:0.5rem;">
+                    <span style="color:#FB923C;font-size:1rem;">⚡</span>
+                    <span><b style="color:#FB923C;">Anticancer activity</b> — Active / Inactive classification</span>
+                </div>
+                <div style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);border-radius:10px;
+                     padding:0.55rem 0.8rem;font-size:0.8rem;color:var(--text-primary);display:flex;align-items:center;gap:0.5rem;">
+                    <span style="color:#F97316;font-size:1rem;">📊</span>
+                    <span><b style="color:#F97316;">Anticancer potency</b> — pIC₅₀ prediction</span>
+                </div>
+            </div>
+            <div style="font-size:0.82rem;color:var(--text-secondary);line-height:1.75;margin-bottom:1rem;">
+                The framework incorporates state-of-the-art graph neural network architectures, including
+                <b style="color:var(--text-primary);">GCN, GAT, GT, and MSMP</b>, together with scaffold-based
+                validation and molecular augmentation strategies to enhance model robustness, reliability, and
+                generalization toward unseen chemical scaffolds.
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-top:0.8rem;">
+                <div style="background:rgba(251,146,60,0.08);border:1px solid rgba(251,146,60,0.2);border-radius:10px;padding:0.7rem;text-align:center;">
+                    <div style="font-family:'Space Grotesk';font-weight:700;font-size:1.3rem;color:#FB923C;">3,600+</div>
+                    <div style="font-size:0.68rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;font-weight:600;">Training Compounds</div>
+                </div>
+                <div style="background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);border-radius:10px;padding:0.7rem;text-align:center;">
+                    <div style="font-family:'Space Grotesk';font-weight:700;font-size:1.3rem;color:#F97316;">0.951</div>
+                    <div style="font-size:0.68rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;font-weight:600;">AUC-ROC Score</div>
+                </div>
+                <div style="background:rgba(234,88,12,0.08);border:1px solid rgba(234,88,12,0.2);border-radius:10px;padding:0.7rem;text-align:center;">
+                    <div style="font-family:'Space Grotesk';font-weight:700;font-size:1.3rem;color:#EA580C;">4</div>
+                    <div style="font-size:0.68rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;font-weight:600;">GNN Architectures</div>
+                </div>
+                <div style="background:rgba(253,186,116,0.08);border:1px solid rgba(253,186,116,0.2);border-radius:10px;padding:0.7rem;text-align:center;">
+                    <div style="font-family:'Space Grotesk';font-weight:700;font-size:1.3rem;color:#FDBA74;">&lt;200ms</div>
+                    <div style="font-size:0.68rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.06em;font-weight:600;">Inference Speed</div>
+                </div>
+            </div>
+            <div style="margin-top:1rem;padding:0.6rem 0.8rem;background:rgba(239,68,68,0.08);border-left:3px solid #ef4444;border-radius:0 8px 8px 0;font-size:0.72rem;color:var(--text-secondary);">
+                ⚠️ <b style="color:#ef4444;">Research tool only.</b> Predictions require experimental validation. Not for clinical use.
+            </div>
+            """, unsafe_allow_html=True)
+
+    # ── RIGHT: Prediction Command Center ─────────────────────────────────────
+    with col_predict:
+        with st.container(border=True):
+            st.markdown("""
+            <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;">
+                <div style="background:rgba(251,146,60,0.15);padding:8px;border-radius:10px;">
+                    <span style="font-size:1.4rem;">🚀</span>
                 </div>
                 <div>
-                    <h2 style="margin:0;font-family:\'Space Grotesk\';font-weight:800;font-size:1.5rem;
-                               background:linear-gradient(90deg, var(--accent-green), #34D399);
+                    <h2 style="margin:0;font-family:'Space Grotesk';font-weight:800;font-size:1.15rem;
+                               background:linear-gradient(90deg,#FB923C,#EA580C);
                                -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
                         Prediction Command Center
                     </h2>
-                    <p style="margin:0;font-size:.9rem;color:var(--text-secondary);">
-                        Integrated GNN-Inference Engine for Anticancer Discovery
+                    <p style="margin:0;font-size:0.75rem;color:var(--text-secondary);">
+                        GNN-Inference Engine for Anticancer Discovery
                     </p>
                 </div>
             </div>
             """, unsafe_allow_html=True)
-            
-            quick_smi = st.text_input("Enter SMILES string (e.g., CC(C)Cc1ccc(cc1)C(C)C(=O)O)", 
-                                     placeholder="Paste SMILES here...", key="home_smi_bento")
-            
+
+            # Auto-fill SMILES from FDA selector
+            default_smi = EXAMPLES.get(sel_home, "")
+            quick_smi = st.text_input("Enter SMILES string",
+                                     value=default_smi,
+                                     placeholder="Paste SMILES here, or select a drug on the left...",
+                                     key="home_smi_bento")
+
             cp1, cp2 = st.columns([1, 1])
             with cp1:
                 model_choice = st.selectbox("Inference Model", [
                     "Random Split — GAT (Recommended)", "Scaffold Split — MSMP"], key="home_model_bento")
             with cp2:
-                st.markdown('<div style="margin-top:28px;"></div>', unsafe_allow_html=True)
+                st.markdown('<div style="margin-top:22px;"></div>', unsafe_allow_html=True)
                 predict_btn = st.button("▶  Execute Prediction", key="home_predict_bento", use_container_width=True)
+
+            if quick_smi.strip():
+                mol_chk_h = Chem.MolFromSmiles(quick_smi.strip())
+                if mol_chk_h:
+                    svg_pred = mol_to_svg(quick_smi.strip(), (320, 160), dark=dark_mode)
+                    if svg_pred: st.markdown(svg_img_tag(svg_pred), unsafe_allow_html=True)
 
             if predict_btn and quick_smi.strip():
                 mol_chk = Chem.MolFromSmiles(quick_smi.strip())
@@ -1024,160 +1152,26 @@ if PAGE == "home":
                         r = run_predict(use_m, quick_smi.strip())
                     if r:
                         css = "result-active" if r["active"] else "result-inactive"
-                        color = "#10b981" if r["active"] else "#ef4444"
+                        color = "#FB923C" if r["active"] else "#ef4444"
                         icon = "⚡" if r["active"] else "🛡️"
                         st.markdown(f"""
                         <div class="{css}">
-                            <div style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;opacity:0.8;">Inference Result</div>
+                            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem;opacity:0.8;">Inference Result</div>
                             <div class="result-label" style="color:{color};">{icon} {"ACTIVE COMPOUND" if r["active"] else "INACTIVE"}</div>
                             <div class="result-sub">Probability Score: {r["prob"]*100:.1f}%</div>
                         </div>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1rem;">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:0.8rem;">
                             <div class="stat-pill">
                                 <div class="stat-lbl">Potency (pIC₅₀)</div>
-                                <div class="stat-val" style="color:var(--accent-blue);">{r["pic50"]}</div>
+                                <div class="stat-val" style="color:#FB923C;font-size:1.3rem;">{r["pic50"]}</div>
                             </div>
                             <div class="stat-pill">
                                 <div class="stat-lbl">Potency (IC₅₀)</div>
-                                <div class="stat-val" style="color:var(--accent-green);">{r["ic50"]} <small style="font-size:0.6em;">µM</small></div>
+                                <div class="stat-val" style="color:#F97316;font-size:1.1rem;">{r["ic50"]} <small style="font-size:0.55em;">µM</small></div>
                             </div>
                         </div>""", unsafe_allow_html=True)
-
-    with col_stats:
-        with st.container(border=True):
-            st.markdown("""
-            <div style="margin-bottom:1.2rem;">
-                <h3 style="margin:0;font-family:\'Space Grotesk\';font-weight:700;font-size:1.1rem;color:var(--text-primary);">
-                    Platform Highlights
-                </h3>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:0.8rem;">
-                <div style="background:rgba(14,165,233,0.08);border-radius:12px;padding:1rem;border:1px solid rgba(14,165,233,0.15);">
-                    <div style="font-size:1.5rem;margin-bottom:0.4rem;">🎯</div>
-                    <div style="font-weight:700;font-size:0.9rem;color:var(--accent-blue);">High Accuracy Engine</div>
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">AUC-ROC up to 0.951 using optimized GAT architectures.</div>
-                </div>
-                <div style="background:rgba(16,185,129,0.08);border-radius:12px;padding:1rem;border:1px solid rgba(16,185,129,0.15);">
-                    <div style="font-size:1.5rem;margin-bottom:0.4rem;">📊</div>
-                    <div style="font-weight:700;font-size:0.9rem;color:var(--accent-green);">Robust Training Set</div>
-                    <div style="font-weight:800;font-size:1.1rem;margin:0.2rem 0;">3,600+</div>
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">Curated compounds from PubChem BioAssay database.</div>
-                </div>
-                <div style="background:rgba(245,158,11,0.08);border-radius:12px;padding:1rem;border:1px solid rgba(245,158,11,0.15);">
-                    <div style="font-size:1.5rem;margin-bottom:0.4rem;">⚡</div>
-                    <div style="font-weight:700;font-size:0.9rem;color:#f59e0b;">Real-time Inference</div>
-                    <div style="font-size:0.75rem;color:var(--text-secondary);">Molecular graph processing in < 200ms per compound.</div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-
-    # ── BENTO GRID ROW 2: THE EXPLORER SUITE ─────────────────────────────────
-    st.markdown('<div style="margin-top:1.5rem;"></div>', unsafe_allow_html=True)
-    col_fda, col_tech, col_links = st.columns([4, 3, 3], gap="medium")
-
-    with col_fda:
-        with st.container(border=True):
-            st.markdown("""
-            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
-                <span style="font-size:1.3rem;">🧪</span>
-                <div style="font-family:\'Space Grotesk\';font-weight:800;font-size:1rem;color:var(--text-primary);">
-                    FDA Drug Explorer
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            sel = st.selectbox("Reference Compound", list(EXAMPLES.keys()), key="bento_mol_sel")
-            smi_ex = EXAMPLES[sel]
-            meta = EXAMPLES_META.get(sel, {})
-            drug_color = meta.get("color", "var(--accent-blue)")
-
-            st.markdown(f"""
-            <div style="background:{drug_color}11; border:1px solid {drug_color}33; border-radius:12px; padding:0.8rem; margin-bottom:1rem;">
-                <div style="font-family:\'Space Grotesk\';font-weight:800;font-size:1.1rem;color:{drug_color};">{sel}</div>
-                <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:4px;">{meta.get('desc','')}</div>
-                <div style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid {drug_color}22;">
-                    <div style="font-size:0.72rem;color:var(--text-secondary);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:0.4rem;">SMILES</div>
-                    <div style="font-family:\'JetBrains Mono\';font-size:0.7rem;color:var(--text-primary);word-break:break-all;line-height:1.5;background:rgba(0,0,0,0.04);border-radius:6px;padding:0.4rem 0.6rem;">{smi_ex}</div>
-                </div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.6rem;">
-                    <div style="background:{drug_color}0D;border:1px solid {drug_color}22;border-radius:8px;padding:0.5rem 0.7rem;text-align:center;">
-                        <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Mol. Weight</div>
-                        <div style="font-family:\'Sora\',sans-serif;font-weight:700;font-size:1rem;color:{drug_color};margin-top:2px;">{Descriptors.MolWt(Chem.MolFromSmiles(smi_ex)):.2f} <span style="font-size:0.7rem;font-weight:400;">Da</span></div>
-                    </div>
-                    <div style="background:{drug_color}0D;border:1px solid {drug_color}22;border-radius:8px;padding:0.5rem 0.7rem;text-align:center;">
-                        <div style="font-size:0.68rem;color:var(--text-secondary);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">LogP</div>
-                        <div style="font-family:\'Sora\',sans-serif;font-weight:700;font-size:1rem;color:{drug_color};margin-top:2px;">{Descriptors.MolLogP(Chem.MolFromSmiles(smi_ex)):.3f}</div>
-                    </div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            t2d, t3d = st.tabs(["2D View", "3D View"])
-            with t2d:
-                svg = mol_to_svg(smi_ex, (350, 220), dark=dark_mode)
-                if svg: st.markdown(svg_img_tag(svg), unsafe_allow_html=True)
-            with t3d:
-                components.html(make_3d_viewer(smi_ex, height="220px", dark=dark_mode), height=230)
-
-    with col_tech:
-        with st.container(border=True):
-            st.markdown("""
-            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
-                <span style="font-size:1.3rem;">⚙️</span>
-                <div style="font-family:\'Space Grotesk\';font-weight:800;font-size:1rem;color:var(--text-primary);">
-                    Core Architecture
-                </div>
-            </div>
-            <div style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.2rem;">
-                GraphACSM-Net integrates advanced GNN layers to capture spatial & topological features.
-            </div>
-            <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:0.6rem;font-family:\'JetBrains Mono\';font-size:0.75rem;border:1px solid var(--card-border);">
-                    <span style="color:var(--accent-blue);">●</span> GCN / GAT Layers
-                </div>
-                <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:0.6rem;font-family:\'JetBrains Mono\';font-size:0.75rem;border:1px solid var(--card-border);">
-                    <span style="color:var(--accent-green);">●</span> Graph Transformer (GT)
-                </div>
-                <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:0.6rem;font-family:\'JetBrains Mono\';font-size:0.75rem;border:1px solid var(--card-border);">
-                    <span style="color:#A78BFA;">●</span> MSMP Architecture
-                </div>
-                <div style="background:rgba(255,255,255,0.04);border-radius:8px;padding:0.6rem;font-family:\'JetBrains Mono\';font-size:0.75rem;border:1px solid var(--card-border);">
-                    <span style="color:#FB923C;">●</span> Scaffold Validation
-                </div>
-            </div>
-            <div style="margin-top:1.2rem; padding:0.8rem; background:rgba(245,158,11,0.1); border-radius:8px; font-size:0.75rem; color:#f59e0b; border:1px solid rgba(245,158,11,0.2);">
-                ⚠️ Research tool. Not for clinical use.
-            </div>
-            """, unsafe_allow_html=True)
-
-    with col_links:
-        with st.container(border=True):
-            st.markdown("""
-            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem;">
-                <span style="font-size:1.3rem;">📚</span>
-                <div style="font-family:\'Space Grotesk\';font-weight:800;font-size:1rem;color:var(--text-primary);">
-                    Documentation
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            for h_icon, h_title, h_target in [
-                ("📖", "User Guide", "help"),
-                ("📊", "Analysis Help", "help"),
-                ("🔬", "Algorithm Details", "algorithm"),
-                ("🧬", "Dataset Info", "dataset"),
-                ("📧", "Contact Support", "contact"),
-            ]:
-                if st.button(f"{h_icon} {h_title}", key=f"bento_nav_{h_title}", use_container_width=True):
-                    st.query_params["page"] = h_target
-                    st.query_params["dark"] = cur_theme
-                    st.rerun()
-            
-            st.markdown("""
-            <div style="margin-top:1.2rem; text-align:center;">
-                <div style="font-size:0.7rem; color:var(--text-secondary); opacity:0.6;">
-                    GraphACSM-Net v1.2.0-Alpha
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            elif not predict_btn:
+                st.markdown(f'<div style="height:80px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--text-secondary);font-size:0.78rem;opacity:0.7;">Select a drug on the left or paste a SMILES, then click ▶ Execute Prediction</div>', unsafe_allow_html=True)
 
     st.markdown('</div>', unsafe_allow_html=True)  # end page-section
 
