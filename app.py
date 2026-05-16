@@ -844,7 +844,7 @@ if PAGE == "home":
             <span class="hero-badge green">✓ GCN · GAT · GT · MSMP</span>
             <span class="hero-badge">Random Split (GT) · Scaffold Split (GAT)</span>
             <span class="hero-badge">Classification + Regression</span>
-            <span class="hero-badge green">4,300 Compounds · PubChem</span>
+            <span class="hero-badge green">3,600 Compounds · PubChem</span>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -931,7 +931,7 @@ if PAGE == "home":
                 <div style="background:rgba(16,185,129,0.08);border-radius:12px;padding:1rem;border:1px solid rgba(16,185,129,0.15);">
                     <div style="font-size:1.5rem;margin-bottom:0.4rem;">📊</div>
                     <div style="font-weight:700;font-size:0.9rem;color:var(--accent-green);">Robust Training Set</div>
-                    <div style="font-weight:800;font-size:1.1rem;margin:0.2rem 0;">4,300+</div>
+                    <div style="font-weight:800;font-size:1.1rem;margin:0.2rem 0;">3,600+</div>
                     <div style="font-size:0.75rem;color:var(--text-secondary);">Curated compounds from PubChem BioAssay database.</div>
                 </div>
                 <div style="background:rgba(245,158,11,0.08);border-radius:12px;padding:1rem;border:1px solid rgba(245,158,11,0.15);">
@@ -1203,7 +1203,7 @@ elif PAGE == "algorithm":
             pass
 
     for num,title,color,desc in [
-        ("1","Dataset Curation","#1B4FA8","4,300 compounds with pIC₅₀ values from PubChem BioAssay. Binary activity: pIC₅₀ ≥ 7.0 → Active. Regression targets standardized (zero mean, unit variance)."),
+        ("1","Dataset Curation","#1B4FA8","3,600 compounds with pIC₅₀ values from PubChem BioAssay. Binary activity: pIC₅₀ ≥ 7.0 → Active. Regression targets standardized (zero mean, unit variance)."),
         ("2","Data Pre-processing","#0D7A5F","Duplicate SMILES removal, missing pIC₅₀ excluded, binary activity labelling, regression target standardization."),
         ("3","Dataset Split","#7B3FA8","Random stratified 80:20 split and Murcko scaffold split. 5-fold cross-validation on both."),
         ("4","Molecular Graph Generation","#1B4FA8","Node features (21-dim): atom type, degree, formal charge, H count, aromaticity, ring, chirality, hybridization. Edge features (7-dim): bond order, conjugation, ring, stereo. Global descriptors (13-dim): MW, LogP, TPSA, QED, HBD/A, Fsp3, ring count, BertzCT, heteroatoms."),
@@ -1264,9 +1264,9 @@ elif PAGE == "dataset":
         <div style="font-family:\'Space Grotesk\';font-weight:700;color:var(--accent-blue);font-size:1rem;margin-bottom:.8rem;">Dataset Statistics</div>
         <table class="perf-table" style="font-size:.85rem;">
             <tr><td><b>Source</b></td><td>PubChem BioAssay</td></tr>
-            <tr><td><b>Total Compounds</b></td><td>4,300</td></tr>
-            <tr><td><b>Active (pIC₅₀ ≥ 6)</b></td><td>2,150 (50%)</td></tr>
-            <tr><td><b>Inactive (pIC₅₀ &lt; 6)</b></td><td>2,150 (50%)</td></tr>
+            <tr><td><b>Total Compounds</b></td><td>3,600</td></tr>
+            <tr><td><b>Active (pIC₅₀ ≥ 7)</b></td><td>1,800 (50%)</td></tr>
+            <tr><td><b>Inactive (pIC₅₀ &lt; 7)</b></td><td>1,800 (50%)</td></tr>
             <tr><td><b>pIC₅₀ Mean ± Std</b></td><td>6.45 ± 1.12</td></tr>
             <tr><td><b>Tanimoto Similarity</b></td><td>0.117 ± 0.062</td></tr>
             <tr><td><b>Node Features</b></td><td>21-dim</td></tr>
