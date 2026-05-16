@@ -438,39 +438,33 @@ div[data-testid="stElementContainer"]:has(.theme-fab-marker) + div button:hover 
     font-family: 'Cinzel', serif !important;
     font-weight: 900 !important;
     font-size: clamp(1.6rem, 4vw, 2.6rem) !important;
-    background: linear-gradient(90deg, #C2410C, #FB923C, #FED7AA, #FB923C, #C2410C) !important;
-    background-size: 200% !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    animation: goldShift 3s linear infinite !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    background: none !important;
+    animation: none !important;
     letter-spacing: .08em !important;
     text-shadow: none !important;
     display: inline-block !important;
 }}
 .hero-title span {{
-    -webkit-text-fill-color: transparent !important;
-    background: inherit !important;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
+    -webkit-text-fill-color: #000000 !important;
+    background: none !important;
 }}
 #hero-title-tw {{
     font-family: 'Cinzel', serif;
     font-weight: 900;
     font-size: clamp(1.6rem, 4vw, 2.6rem);
-    background: linear-gradient(90deg, #C2410C, #FB923C, #FED7AA, #FB923C, #C2410C);
-    background-size: 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: goldShift 3s linear infinite;
+    color: #000000;
+    -webkit-text-fill-color: #000000;
+    background: none;
+    animation: none;
     letter-spacing: .08em;
     display: inline-block;
     margin-bottom: .5rem;
 }}
 #hero-title-tw::after {{
     content: '|';
-    -webkit-text-fill-color: #FB923C;
+    -webkit-text-fill-color: #000000;
     animation: caretBlink 1s step-end infinite;
     margin-left: 2px;
     font-weight: 400;
@@ -1055,9 +1049,7 @@ if PAGE == "home":
             st.markdown("""
             <div style="margin-bottom:1rem;">
                 <div style="font-family:'Cinzel',serif;font-weight:900;font-size:1.25rem;
-                     background:linear-gradient(90deg,#C2410C,#FB923C,#FED7AA,#FB923C,#C2410C);
-                     background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
-                     background-clip:text;animation:goldShift 3s linear infinite;letter-spacing:.05em;">
+                     color:#000000;letter-spacing:.05em;">
                     Welcome to GraphACSM-Net
                 </div>
             </div>
@@ -1118,8 +1110,7 @@ if PAGE == "home":
                 </div>
                 <div>
                     <h2 style="margin:0;font-family:'Space Grotesk';font-weight:800;font-size:1.15rem;
-                               background:linear-gradient(90deg,#FB923C,#EA580C);
-                               -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+                               color:#000000;">
                         Prediction Command Center
                     </h2>
                     <p style="margin:0;font-size:0.75rem;color:var(--text-secondary);">
