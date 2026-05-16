@@ -83,7 +83,7 @@ st.markdown(f"""
 html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid="block-container"]{{
     background:var(--bg-gradient, var(--bg-color))!important;color:var(--text-primary)!important;
     font-family:'Plus Jakarta Sans',sans-serif!important; transition: background 0.3s ease;
-    font-size: 18px !important;
+    font-size: 16px !important;
 }}
 [data-testid="block-container"]{{padding:0!important;max-width:100%!important;}}
 
@@ -100,13 +100,13 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .navbar-brand{{display:flex;align-items:center;gap:.8rem;}}
 .navbar-logo{{width:40px;height:40px;background:linear-gradient(135deg, var(--accent-blue), var(--accent-green));border-radius:12px;
     display:flex;align-items:center;justify-content:center;font-size:1.4rem;box-shadow:var(--glow-blue);}}
-.navbar-title{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.6rem;color:var(--text-primary);letter-spacing:-.01em;}}
+.navbar-title{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.4rem;color:var(--text-primary);letter-spacing:-.01em;}}
 .navbar-title span{{color:var(--accent-green);}}
-.navbar-subtitle{{font-size:.85rem;color:var(--text-secondary);font-weight:400;display:block;margin-top:-4px;}}
+.navbar-subtitle{{font-size:.7rem;color:var(--text-secondary);font-weight:400;display:block;margin-top:-4px;}}
 .navbar-links{{display:flex;gap:.5rem;}}
 .nav-btn{{
     color:var(--text-secondary)!important;background:transparent;border:none;
-    padding:.5rem 1rem;border-radius:8px;font-size:1rem;font-weight:600;
+    padding:.5rem 1rem;border-radius:8px;font-size:.9rem;font-weight:600;
     text-decoration:none;display:inline-block;transition:all .3s;font-family:'Plus Jakarta Sans';}}
 .nav-btn:hover{{background:rgba(120, 120, 120, 0.1);color:var(--text-primary)!important;}}
 .nav-btn.active{{background:rgba(120, 120, 120, 0.15);color:var(--text-primary)!important;
@@ -122,7 +122,7 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .hero-title{{font-family:'Cinzel',serif;font-weight:900;font-size:2.2rem;
     letter-spacing:.08em;margin-bottom:.5rem;}}
 .hero-title span{{color:var(--accent-green);}}
-.hero-sub{{font-size:1.15rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
+.hero-sub{{font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;font-weight:300;}}
 .hero-badges{{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;}}
 .hero-badge{{background:rgba(255,255,255,0.55);border:1.5px solid rgba(99,102,241,0.35);
     border-radius:20px;padding:.4rem 1rem;font-size:.85rem;color:#3730a3;font-weight:700;
@@ -132,9 +132,9 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 
 /* ── PAGE SECTION ────────────────────────────────────────────────────────── */
 .page-section{{padding:2rem 2.5rem;}}
-.section-heading{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.8rem;
+.section-heading{{font-family:\'Sora\',sans-serif;font-weight:700;font-size:1.6rem;
     color:var(--text-primary);margin-bottom:.4rem;}}
-.section-sub{{font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.5rem;}}
+.section-sub{{font-size:.95rem;color:var(--text-secondary);margin-bottom:1.5rem;}}
 
 /* ── CARDS ───────────────────────────────────────────────────────────────── */
 .card{{background:var(--card-bg);border-radius:16px;padding:1.5rem;
@@ -147,9 +147,9 @@ html,body,[data-testid="stAppViewContainer"],[data-testid="stMain"],[data-testid
 .stat-grid{{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0;}}
 .stat-pill{{background:rgba(120,120,120,0.05);border:1px solid var(--card-border);border-radius:12px;
     padding:.8rem 1.2rem;text-align:center;flex:1;min-width:90px;}}
-.stat-val{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.8rem;color:var(--accent-blue);}}
+.stat-val{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.6rem;color:var(--accent-blue);}}
 .stat-val.green{{color:var(--accent-green);}}
-.stat-lbl{{font-size:.85rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;font-weight:600;}}
+.stat-lbl{{font-size:.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.08em;font-weight:600;}}
 
 /* ── BUTTONS ─────────────────────────────────────────────────────────────── */
 .stButton>button{{
@@ -186,7 +186,7 @@ div[data-testid="stTextInputRootElement"]:focus-within, div[data-testid="stTextA
     border-color:var(--accent-blue)!important;
     box-shadow:var(--glow-blue)!important;
 }}
-label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:1rem!important;}}
+label{{color:var(--text-secondary)!important;font-weight:600!important;font-size:.95rem!important;}}
 
 .stSelectbox>div>div, .stSelectbox div[data-baseweb="select"], .stSelectbox [data-baseweb="select"]>div{{
     background:var(--card-bg)!important;
@@ -209,8 +209,8 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
     animation: pulseGlow 2s infinite alternate;}}
 .result-inactive{{background:rgba(239,68,68,0.1);border:2px solid var(--accent-red);
     border-radius:16px;padding:1.5rem;text-align:center;margin:1rem 0; box-shadow: 0 0 15px rgba(239,68,68,0.3);}}
-.result-label{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.7rem;margin-bottom:.3rem;}}
-.result-sub{{font-size:1rem;color:var(--text-secondary);}}
+.result-label{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.5rem;margin-bottom:.3rem;}}
+.result-sub{{font-size:.9rem;color:var(--text-secondary);}}
 
 .conf-wrap{{margin:.8rem 0;}}
 .conf-row{{display:flex;justify-content:space-between;font-size:.85rem;color:var(--text-secondary);margin-bottom:.4rem;font-weight:600;}}
@@ -223,10 +223,10 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
 .desc-val{{font-family:\'Space Grotesk\';font-weight:700;font-size:1.1rem;color:var(--accent-blue);margin-top:.2rem;}}
 
 /* ── TABLE ───────────────────────────────────────────────────────────────── */
-.perf-table{{width:100%;border-collapse:collapse;font-size:1rem;}}
+.perf-table{{width:100%;border-collapse:collapse;font-size:.9rem;}}
 .perf-table th{{background:rgba(120,120,120,0.1);color:var(--text-primary);padding:.8rem 1rem;text-align:left;
-    font-family:\'Space Grotesk\';font-weight:700;font-size:.95rem;letter-spacing:.05em;border-bottom:1px solid var(--card-border);}}
-.perf-table td{{padding:.8rem 1rem;border-bottom:1px solid var(--card-border);color:var(--text-secondary);font-size:.95rem;}}
+    font-family:\'Space Grotesk\';font-weight:700;font-size:.85rem;letter-spacing:.05em;border-bottom:1px solid var(--card-border);}}
+.perf-table td{{padding:.8rem 1rem;border-bottom:1px solid var(--card-border);color:var(--text-secondary);}}
 .perf-table tr:hover td{{background:rgba(120,120,120,0.05);}}
 .perf-table .best{{color:var(--accent-green);font-weight:700;}}
 .perf-table .model-col{{font-family:\'Space Grotesk\';font-weight:700;color:var(--text-primary);}}
@@ -244,9 +244,9 @@ label{{color:var(--text-secondary)!important;font-weight:600!important;font-size
 [data-testid="stSidebar"]{{background:var(--bg-color)!important;border-right:1px solid var(--card-border)!important;}}
 
 .info-box{{background:rgba(14,165,233,0.1);border-left:4px solid var(--accent-blue);border-radius:0 10px 10px 0;
-    padding:1rem 1.2rem;font-size:1rem;color:var(--text-primary);margin:.5rem 0;}}
+    padding:1rem 1.2rem;font-size:.9rem;color:var(--text-primary);margin:.5rem 0;}}
 .warn-box{{background:rgba(239,68,68,0.1);border-left:4px solid var(--accent-red);border-radius:0 10px 10px 0;
-    padding:1rem 1.2rem;font-size:1rem;color:var(--text-primary);margin:.5rem 0;}}
+    padding:1rem 1.2rem;font-size:.9rem;color:var(--text-primary);margin:.5rem 0;}}
 
 .site-footer{{background:rgba(120,120,120,0.05);color:var(--text-secondary);text-align:center;
     padding:2rem;font-size:.85rem;margin-top:3rem;border-top:1px solid var(--card-border);}}
@@ -379,7 +379,7 @@ div[data-testid="stVerticalBlock"]:has(.sticky-nav-marker) button {{
     font-weight: 600 !important;
     height: 46px !important;
     font-family: 'Sora', sans-serif !important;
-    font-size: 1.05rem !important;
+    font-size: 0.95rem !important;
     transition: all 0.25s ease !important;
     margin: 0 !important;
     padding: 0.5rem !important;
